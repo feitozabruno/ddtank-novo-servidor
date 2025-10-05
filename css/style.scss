@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Jumble";
+  font-family: "PoetsenOne";
   src: url("../font/PoetsenOne-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -20,7 +20,7 @@ input,
 textarea,
 select {
   font-size: 1.6rem;
-  font-family: "Jumble", sans-serif;
+  font-family: "PoetsenOne", sans-serif;
   font-weight: normal;
   --webkit-font-smoothing: antialiased;
 }
@@ -312,6 +312,13 @@ body {
     text-shadow: -3px -3px 3px #e05400, 3px -3px 2px #e05400,
       -3px 3px 2px #e05400, 3px 3px 2px #e05400;
   }
+
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
 }
 
 .explore {
@@ -447,7 +454,12 @@ body {
 
 .modal-items {
   .modal-content {
-    width: 70%;
+    width: 80%;
+
+    p {
+      font-size: 3vw;
+      margin-bottom: 2vw;
+    }
   }
 }
 
@@ -471,16 +483,16 @@ body {
       }
 
       img {
-        width: 6.51vw; // 50px;
-        height: 7vw; // 54px;
+        width: 8vw; // 50px;
+        height: 8vw; // 54px;
         margin: 1px;
       }
 
       span {
         position: absolute;
-        right: 0.78125vw; // 6px;
-        bottom: 0.78125vw; // 6px;
-        font-size: 2vw; // 16px;
+        right: 0; // 6px;
+        bottom: 0; // 6px;
+        font-size: 2.5vw; // 16px;
 
         color: #fff;
         text-shadow: -2px -2px 2px #061a3e, 2px -2px 1px #061a3e,

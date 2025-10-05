@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Jumble";
+  font-family: "PoetsenOne";
   src: url("../font/PoetsenOne-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -19,7 +19,7 @@ input,
 textarea,
 select {
   font-size: 1.6rem;
-  font-family: "Jumble", sans-serif;
+  font-family: "PoetsenOne", sans-serif;
   font-weight: normal;
   --webkit-font-smoothing: antialiased;
 }
@@ -265,6 +265,7 @@ body {
   width: 39vw;
   height: 6.77vw;
   cursor: pointer;
+  transition: 300ms;
 }
 .visualizar-premios h2 {
   font-size: 2vw;
@@ -272,6 +273,10 @@ body {
   font-weight: normal;
   color: #fff;
   text-shadow: -3px -3px 3px #e05400, 3px -3px 2px #e05400, -3px 3px 2px #e05400, 3px 3px 2px #e05400;
+}
+.visualizar-premios:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 .explore h2 {
@@ -392,7 +397,11 @@ body {
 }
 
 .modal-items .modal-content {
-  width: 70%;
+  width: 80%;
+}
+.modal-items .modal-content p {
+  font-size: 3vw;
+  margin-bottom: 2vw;
 }
 
 .premios div.itens {
@@ -412,15 +421,15 @@ body {
   filter: brightness(1.5);
 }
 .premios div.itens .item img {
-  width: 6.51vw;
-  height: 7vw;
+  width: 8vw;
+  height: 8vw;
   margin: 1px;
 }
 .premios div.itens .item span {
   position: absolute;
-  right: 0.78125vw;
-  bottom: 0.78125vw;
-  font-size: 2vw;
+  right: 0;
+  bottom: 0;
+  font-size: 2.5vw;
   color: #fff;
   text-shadow: -2px -2px 2px #061a3e, 2px -2px 1px #061a3e, -2px 2px 1px #061a3e, 2px 2px 1px #061a3e;
 }
