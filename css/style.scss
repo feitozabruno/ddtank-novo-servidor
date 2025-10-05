@@ -403,6 +403,7 @@ body {
     border: 1px solid #ccc;
     margin-bottom: 4vw; // 15px;
     font-size: 4vw; // 18px;
+    line-height: 2.5;
   }
 
   button {
@@ -411,12 +412,12 @@ body {
     padding: 5vw 10vw;
     border: none;
     border-radius: 5px;
-    height: 6.51vw; // 50px;
+    height: 12vw; // 50px;
     cursor: pointer;
     font-size: 4vw;
     margin-top: 4vw; // 15px;
-    text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400,
-      -2px 2px 1px #e05400, 2px 2px 1px #e05400;
+    text-shadow: -2px -2px 3px #e05400, 2px -2px 3px #e05400,
+      -2px 2px 3px #e05400, 2px 2px 3px #e05400;
 
     &:hover {
       filter: brightness(1.2);

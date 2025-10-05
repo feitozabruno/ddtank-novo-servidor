@@ -356,6 +356,7 @@ body {
   border: 1px solid #ccc;
   margin-bottom: 4vw;
   font-size: 4vw;
+  line-height: 2.5;
 }
 .modal-content form button {
   background-color: #fe9712;
@@ -363,11 +364,11 @@ body {
   padding: 5vw 10vw;
   border: none;
   border-radius: 5px;
-  height: 6.51vw;
+  height: 12vw;
   cursor: pointer;
   font-size: 4vw;
   margin-top: 4vw;
-  text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400, -2px 2px 1px #e05400, 2px 2px 1px #e05400;
+  text-shadow: -2px -2px 3px #e05400, 2px -2px 3px #e05400, -2px 2px 3px #e05400, 2px 2px 3px #e05400;
 }
 .modal-content form button:hover {
   filter: brightness(1.2);
