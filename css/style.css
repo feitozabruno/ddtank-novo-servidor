@@ -44,7 +44,7 @@ button {
 
 body {
   background-color: #000;
-  background-image: url(../img/mobile/bg.png);
+  background-image: url(../img/mobile/bg.webp);
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
@@ -57,7 +57,7 @@ body {
   margin: 0 auto;
   margin-top: -12px;
   overflow: hidden;
-  background-image: url("../img/mobile/cenario1.png");
+  background-image: url("../img/mobile/cenario1.webp");
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ body {
 }
 
 .data-lancamento {
-  background-image: url(../img/mobile/data-base.png);
+  background-image: url(../img/mobile/data-base.webp);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -146,7 +146,7 @@ body {
 }
 
 .concorra {
-  background-image: url(../img/mobile/concorra-base.png);
+  background-image: url(../img/mobile/concorra-base.webp);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,7 +205,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-image: url("../img/mobile/cenario2.png");
+  background-image: url("../img/mobile/cenario2.webp");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -218,7 +218,7 @@ body {
   margin-top: 3.25vw;
 }
 .items .item {
-  background-image: url("../img/mobile/itens/base-itens.png");
+  background-image: url("../img/mobile/itens/base-itens.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,7 +257,7 @@ body {
 }
 
 .visualizar-premios {
-  background-image: url("../img/mobile/botao-itens-base.png");
+  background-image: url("../img/mobile/botao-itens-base.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@ body {
   border-radius: 10px;
   position: relative;
   text-align: center;
-  background-image: url(../img/mobile/bg.png);
+  background-image: url(../img/mobile/bg.webp);
   background-size: cover;
   color: #fff;
   font-size: 4vw;
