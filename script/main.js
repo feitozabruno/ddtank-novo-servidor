@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Define a data de lançamento: 11 de Outubro do ano corrente, às 11:00.
+  // Define a data de lançamento: 11 de Outubro do ano corrente, às 15:00:00.
   const ANO_LANCAMENTO = new Date().getFullYear(); // Pega o ano atual automaticamente
   const MES_LANCAMENTO = 9; // 9 = Outubro... (0 = Janeiro)
-  const DIA_LANCAMENTO = 11;
-  const HORA_LANCAMENTO = 11; // 11hrs
-  const MINUTO_LANCAMENTO = 0; // 11:00hrs
-  const SEGUNDO_LANCAMENTO = 0; // 11:00:00hrs
+  const DIA_LANCAMENTO = 11; // 11 de Outubro
+  const HORA_LANCAMENTO = 15; // 15hrs
+  const MINUTO_LANCAMENTO = 0; // 15:00hrs
+  const SEGUNDO_LANCAMENTO = 0; // 15:00:00hrs
 
-  // Define a data de lançamento com base nas constantes acima.
-  // const launchDate = new Date(new Date().getFullYear(), 9, 11, 11, 0, 0); --- IGNORE ---
-  const launchDate = new Date(
-    ANO_LANCAMENTO,
-    MES_LANCAMENTO,
-    DIA_LANCAMENTO,
-    HORA_LANCAMENTO,
-    MINUTO_LANCAMENTO,
-    SEGUNDO_LANCAMENTO
-  );
+  // Constrói a string de data no formato ISO 8601 com o fuso horário de São Paulo (-03:00)
+  // Isso garante que a data seja criada corretamente, independentemente do fuso horário do usuário.
+  const monthString = String(MES_LANCAMENTO + 1).padStart(2, "0");
+  const dayString = String(DIA_LANCAMENTO).padStart(2, "0");
+  const hourString = String(HORA_LANCAMENTO).padStart(2, "0");
+  const minuteString = String(MINUTO_LANCAMENTO).padStart(2, "0");
+  const secondString = String(SEGUNDO_LANCAMENTO).padStart(2, "0");
+
+  const isoString = `${ANO_LANCAMENTO}-${monthString}-${dayString}T${hourString}:${minuteString}:${secondString}-03:00`;
+  const launchDate = new Date(isoString);
 
   const countdownElement = document.querySelector(".contador h2.destaque");
 
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const now = new Date().getTime();
       const distance = launchDate - now;
 
-      // Se a data de lançamento já passou, para o contador.
       if (distance < 0) {
         clearInterval(interval);
         countdownElement.innerHTML = "LANÇADO!";
@@ -40,14 +39,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Formata os números para terem sempre dois dígitos (ex: 09, 08, 07)
-      const totalHours = days * 24 + hours;
-      const formattedHours = String(totalHours).padStart(2, "0");
-      const formattedMinutes = String(minutes).padStart(2, "0");
-      const formattedSeconds = String(seconds).padStart(2, "0");
+      const legendaDias = document.querySelector(".legenda-dias");
 
-      // Atualiza o HTML do contador
-      countdownElement.innerHTML = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+      // Se o tempo restante for maior que 24 horas, exibe os dias.
+      if (distance > 24 * 60 * 60 * 1000) {
+        const formattedDays = String(days).padStart(2, "0");
+        const formattedHours = String(hours).padStart(2, "0");
+        const formattedMinutes = String(minutes).padStart(2, "0");
+        const formattedSeconds = String(seconds).padStart(2, "0");
+        countdownElement.innerHTML = `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        if (legendaDias) legendaDias.style.display = "inline";
+      } else {
+        // Caso contrário, exibe apenas horas, minutos e segundos.
+        const totalHours = days * 24 + hours;
+        const formattedHours = String(totalHours).padStart(2, "0");
+        const formattedMinutes = String(minutes).padStart(2, "0");
+        const formattedSeconds = String(seconds).padStart(2, "0");
+        countdownElement.innerHTML = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        if (legendaDias) legendaDias.style.display = "none";
+      }
     }, 1000);
   }
 

@@ -212,7 +212,7 @@ body {
 
 .items {
   text-align: center;
-  width: 75%;
+  width: 74%;
   margin: 0 auto;
   margin-top: 3.25vw;
 }
@@ -314,7 +314,7 @@ body {
   background-image: url(../img/mobile/bg.png);
   background-size: cover;
   color: #fff;
-  text-shadow: -2px -2px 2px #0d1f28, 2px -2px 1px #0d1f28, -2px 2px 1px #0d1f28, 2px 2px 1px #0d1f28;
+  text-shadow: 2px 2px 3px #0d1f28;
 }
 .modal-content h2 {
   color: #fe9712;
