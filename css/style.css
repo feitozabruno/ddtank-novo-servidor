@@ -16,7 +16,8 @@
 body,
 button,
 input,
-textarea {
+textarea,
+select {
   font-size: 1.6rem;
   font-family: "Jumble", sans-serif;
   font-weight: normal;
@@ -314,6 +315,7 @@ body {
   background-image: url(../img/mobile/bg.png);
   background-size: cover;
   color: #fff;
+  font-size: 2vw;
   text-shadow: 2px 2px 3px #0d1f28;
 }
 .modal-content h2 {
@@ -325,7 +327,7 @@ body {
 .close-modal {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
   color: #aaa;
   font-size: 3.64vw;
   font-weight: bold;
@@ -340,29 +342,52 @@ body {
 }
 
 .modal-content form {
-  margin-top: 20px;
+  margin-top: 2.6vw;
+}
+.modal-content form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
 }
 .modal-content form input {
   width: 100%;
-  padding: 10px;
+  padding: 1.3vw;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-bottom: 15px;
+  margin-bottom: 1.95vw;
+  font-size: 2.34375vw;
 }
 .modal-content form button {
   background-color: #fe9712;
   color: white;
-  padding: 10px 15px;
+  padding: 1.3vw 1.95vw;
   border: none;
   border-radius: 5px;
-  height: 50px;
+  height: 6.51vw;
   cursor: pointer;
   font-size: 3.5vw;
-  margin-top: 15px;
+  margin-top: 1.95vw;
   text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400, -2px 2px 1px #e05400, 2px 2px 1px #e05400;
 }
 .modal-content form button:hover {
   filter: brightness(1.2);
+}
+.modal-content form .phone-input-container {
+  display: flex;
+  margin-bottom: 1.95vw;
+}
+.modal-content form .phone-input-container select {
+  width: 15.625vw;
+  padding: 1.3vw;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+  border-right: none;
+  background-color: #fff;
+  font-size: 2.34375vw;
+}
+.modal-content form .phone-input-container input[type=tel] {
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 0;
 }
 
 .premios div.itens {
@@ -382,14 +407,15 @@ body {
   filter: brightness(1.5);
 }
 .premios div.itens .item img {
-  width: 50px;
-  height: 54px;
+  width: 6.51vw;
+  height: 7vw;
   margin: 1px;
 }
 .premios div.itens .item span {
   position: absolute;
-  right: 6px;
-  bottom: 6px;
+  right: 0.78125vw;
+  bottom: 0.78125vw;
+  font-size: 2vw;
   color: #fff;
   text-shadow: -2px -2px 2px #061a3e, 2px -2px 1px #061a3e, -2px 2px 1px #061a3e, 2px 2px 1px #061a3e;
 }

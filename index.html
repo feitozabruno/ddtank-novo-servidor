@@ -116,8 +116,22 @@
         <p>S13: Aventura Espacial</p>
         <p>11 de outubro às 15 horas</p>
         <form>
-          <input type="email" placeholder="Seu e-mail" required />
-          <input type="tel" placeholder="Seu WhatsApp" required />
+          <label for="email">E-mail:</label>
+          <input id="email" type="email" placeholder="seu@email.com" required />
+          <label for="whatsapp">WhatsApp:</label>
+          <div class="phone-input-container">
+            <select name="country-code">
+              <option value="+55">🇧🇷 +55</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+54">🇦🇷 +54</option>
+            </select>
+            <input
+              id="whatsapp"
+              type="tel"
+              placeholder="(11) 9.8765-4321"
+              required
+            />
+          </div>
           <p>
             Preencha os dados acima para garantir as recompensas exclusivas e
             concorrer ao sorteio de 5.000 reais em recarga
