@@ -296,7 +296,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal.show {
+.show {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,10 +304,10 @@ body {
 
 .modal-content {
   background-color: #fefefe;
-  padding: 20px;
+  padding: 2.6vw;
   border: 1px solid #888;
   width: 80%;
-  max-width: 400px;
+  max-width: 52.08vw;
   border-radius: 10px;
   position: relative;
   text-align: center;
@@ -318,7 +318,8 @@ body {
 }
 .modal-content h2 {
   color: #fe9712;
-  font-size: 3.2rem;
+  font-size: 4.16vw;
+  margin-bottom: 5px;
 }
 
 .close-modal {
@@ -326,7 +327,7 @@ body {
   top: 0;
   right: 10px;
   color: #aaa;
-  font-size: 28px;
+  font-size: 3.64vw;
   font-weight: bold;
   background: none;
   border: none;
@@ -339,9 +340,6 @@ body {
 }
 
 .modal-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
   margin-top: 20px;
 }
 .modal-content form input {
@@ -349,7 +347,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-family: "Jumble", sans-serif;
+  margin-bottom: 15px;
 }
 .modal-content form button {
   background-color: #fe9712;
@@ -359,12 +357,41 @@ body {
   border-radius: 5px;
   height: 50px;
   cursor: pointer;
-  font-family: "Jumble", sans-serif;
   font-size: 3.5vw;
+  margin-top: 15px;
   text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400, -2px 2px 1px #e05400, 2px 2px 1px #e05400;
 }
 .modal-content form button:hover {
   filter: brightness(1.2);
+}
+
+.premios div.itens {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 4px;
+}
+.premios div.itens .item {
+  position: relative;
+  display: inline-block;
+  margin: 2px;
+  transition: 300ms;
+}
+.premios div.itens .item:hover {
+  transform: scale(1.1);
+  filter: brightness(1.5);
+}
+.premios div.itens .item img {
+  width: 50px;
+  height: 54px;
+  margin: 1px;
+}
+.premios div.itens .item span {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  color: #fff;
+  text-shadow: -2px -2px 2px #061a3e, 2px -2px 1px #061a3e, -2px 2px 1px #061a3e, 2px 2px 1px #061a3e;
 }
 
 @media (min-width: 768px) {

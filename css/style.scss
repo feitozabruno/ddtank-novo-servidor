@@ -339,7 +339,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal.show {
+.show {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,10 +347,10 @@ body {
 
 .modal-content {
   background-color: #fefefe;
-  padding: 20px;
+  padding: 2.6vw; // 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 400px;
+  max-width: 52.08vw; // 400px;
   border-radius: 10px;
   position: relative;
   text-align: center;
@@ -358,12 +358,11 @@ body {
   background-size: cover;
   color: #fff;
   text-shadow: 2px 2px 3px #0d1f28;
-  // text-shadow: -2px -2px 2px #0d1f28, 2px -2px 1px #0d1f28, -2px 2px 1px #0d1f28,
-  //   2px 2px 1px #0d1f28;
 
   h2 {
     color: #fe9712;
-    font-size: 3.2rem;
+    font-size: 4.16vw; // 3.2rem;
+    margin-bottom: 5px;
   }
 }
 
@@ -372,7 +371,7 @@ body {
   top: 0;
   right: 10px;
   color: #aaa;
-  font-size: 28px;
+  font-size: 3.64vw; // 28px;
   font-weight: bold;
   background: none;
   border: none;
@@ -387,9 +386,6 @@ body {
 }
 
 .modal-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
   margin-top: 20px;
 
   input {
@@ -397,7 +393,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-family: "Jumble", sans-serif;
+    margin-bottom: 15px;
   }
 
   button {
@@ -408,13 +404,51 @@ body {
     border-radius: 5px;
     height: 50px;
     cursor: pointer;
-    font-family: "Jumble", sans-serif;
     font-size: 3.5vw;
+    margin-top: 15px;
     text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400,
       -2px 2px 1px #e05400, 2px 2px 1px #e05400;
 
     &:hover {
       filter: brightness(1.2);
+    }
+  }
+}
+
+.premios {
+  div.itens {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4px;
+
+    .item {
+      position: relative;
+      display: inline-block;
+      margin: 2px;
+
+      transition: 300ms;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.5);
+      }
+
+      img {
+        width: 50px;
+        height: 54px;
+        margin: 1px;
+      }
+
+      span {
+        position: absolute;
+        right: 6px;
+        bottom: 6px;
+
+        color: #fff;
+        text-shadow: -2px -2px 2px #061a3e, 2px -2px 1px #061a3e,
+          -2px 2px 1px #061a3e, 2px 2px 1px #061a3e;
+      }
     }
   }
 }

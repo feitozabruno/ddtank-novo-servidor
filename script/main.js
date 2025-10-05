@@ -60,30 +60,45 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 1000);
   }
+});
 
-  const preRegistroBtn = document.querySelector(".pre-registro-btn");
-  const modal = document.querySelector(".modal");
-  const closeModal = document.querySelector(".close-modal");
+const preRegistroBtn = document.querySelector(".pre-registro-btn");
+const modal = document.querySelectorAll(".modal");
+const closeModal = document.querySelectorAll(".close-modal");
+const form = document.querySelector(".modal-content form");
+const mostrarPremiosBtn = document.querySelector(".visualizar-premios");
 
-  preRegistroBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    modal.classList.add("show");
-  });
+preRegistroBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  modal[0].classList.add("show");
+});
 
-  closeModal.addEventListener("click", () => {
-    modal.classList.remove("show");
-  });
+closeModal[0].addEventListener("click", () => {
+  modal[0].classList.remove("show");
+});
 
-  window.addEventListener("click", (event) => {
-    if (event.target == modal) {
-      modal.classList.remove("show");
-    }
-  });
+window.addEventListener("click", (event) => {
+  if (event.target == modal[0]) {
+    modal[0].classList.remove("show");
+  }
+});
 
-  const form = document.querySelector(".modal-content form");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    alert("Pré-registro realizado com sucesso!");
-    modal.classList.remove("show");
-  });
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  alert("Pré-registro realizado com sucesso!");
+  modal[0].classList.remove("show");
+});
+
+mostrarPremiosBtn.addEventListener("click", () => {
+  modal[1].classList.add("show");
+});
+
+closeModal[1].addEventListener("click", () => {
+  modal[1].classList.remove("show");
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target == modal[1]) {
+    modal[1].classList.remove("show");
+  }
 });
