@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "Jumble";
+  src: url("../font/PoetsenOne-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+body,
+button,
+input,
+textarea {
+  font-size: 1.6rem;
+  font-family: "Jumble", sans-serif;
+  font-weight: normal;
+  --webkit-font-smoothing: antialiased;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+body {
+  background-color: #000;
+  background-image: url(../img/mobile/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -12px;
+  overflow: hidden;
+  background-image: url("../img/mobile/cenario1.png");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 100%;
+  padding-top: 3vw;
+}
+.logo img {
+  width: 32vw;
+  height: auto;
+}
+
+.novo-servidor {
+  margin-top: 13vw;
+}
+.novo-servidor img {
+  width: 48vw;
+  height: auto;
+}
+
+.data-lancamento {
+  background-image: url(../img/mobile/data-base.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.destaque {
+  color: #fe9712;
+}
+
+.informativo {
+  position: relative;
+  color: #fff;
+  margin-top: 0.5rem;
+  text-shadow: -2px -2px 2px #0d1f28, 2px -2px 1px #0d1f28, -2px 2px 1px #0d1f28, 2px 2px 1px #0d1f28;
+}
+.informativo p {
+  font-size: 2.6vw;
+}
+.informativo h2 {
+  font-size: 4.16vw;
+  font-weight: normal;
+}
+.informativo h3 {
+  font-weight: normal;
+  font-size: 1.822vw;
+}
+.informativo img {
+  position: absolute;
+  top: 2.6vw;
+  right: 28.64vw;
+  width: 5vw;
+  height: auto;
+}
+
+.pre-registro-btn {
+  position: relative;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: -7.81vw;
+  transition: 300ms;
+}
+.pre-registro-btn img {
+  width: 80vw;
+  height: auto;
+}
+.pre-registro-btn span {
+  position: absolute;
+  top: 13.67vw;
+  left: 23.43vw;
+  color: #fff;
+  font-size: 4.16vw;
+  line-height: 1;
+  text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400, -2px 2px 1px #e05400, 2px 2px 1px #e05400;
+}
+.pre-registro-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.concorra {
+  background-image: url(../img/mobile/concorra-base.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 75.52vw;
+  height: 12.76vw;
+  margin: 0 auto;
+}
+.concorra h2 {
+  padding-top: 2.34vw;
+  padding-left: 6.51vw;
+  font-weight: normal;
+  font-size: 3.125vw;
+}
+.concorra h3 {
+  margin-top: 1.3vw;
+  font-weight: normal;
+  font-size: 2.6vw;
+}
+
+.cronometro {
+  text-align: center;
+  margin-top: 1.3vw;
+}
+.cronometro .icone-calendario,
+.cronometro .contador {
+  display: inline-block;
+  vertical-align: middle;
+}
+.cronometro .icone-calendario img {
+  width: 10.41vw;
+  height: 10.41vw;
+}
+.cronometro .contador {
+  margin-left: 1.3vw;
+  text-align: left;
+  color: #fff;
+  line-height: 1;
+}
+.cronometro .contador h3 {
+  font-size: 3.125vw;
+  font-weight: normal;
+}
+.cronometro .contador h2 {
+  font-size: 5.2vw;
+}
+.cronometro .contador .legenda {
+  margin-top: 0.65vw;
+  font-size: 1.822vw;
+}
+.cronometro .contador .legenda span + span {
+  margin-left: 0.65vw;
+}
+
+.box {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-image: url("../img/mobile/cenario2.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.items {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 3.25vw;
+}
+.items .item {
+  background-image: url("../img/mobile/itens/base-itens.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.95vw;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1.95vw;
+  width: 14.32vw;
+  height: 14.32vw;
+}
+.items .item img {
+  width: 10.41vw;
+  height: 10.41vw;
+}
+.items .item span {
+  position: absolute;
+  bottom: 2.73vw;
+  right: 3.38vw;
+  color: #fff;
+  font-size: 2vw;
+}
+.items .item.top {
+  position: relative;
+}
+.items .item.top img {
+  position: absolute;
+  top: -1.95vw;
+  left: -1.95vw;
+  width: 18.22vw;
+  height: 18.22vw;
+}
+.items .item.top span {
+  bottom: 2.6vw;
+  right: 2.6vw;
+}
+
+.visualizar-premios {
+  background-image: url("../img/mobile/botao-itens-base.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 39vw;
+  height: 6.77vw;
+  cursor: pointer;
+}
+.visualizar-premios h2 {
+  font-size: 2vw;
+  padding-top: 1.5625vw;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: -3px -3px 3px #e05400, 3px -3px 2px #e05400, -3px 3px 2px #e05400, 3px 3px 2px #e05400;
+}
+
+.explore h2 {
+  margin-top: 2vw;
+  font-size: 3.64vw;
+  color: #ffcc12;
+  text-shadow: 0px 3px 1px #822200;
+}
+.explore img {
+  width: 100%;
+  height: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  background-image: url(../img/mobile/bg.png);
+  background-size: cover;
+  color: #fff;
+  text-shadow: -2px -2px 2px #0d1f28, 2px -2px 1px #0d1f28, -2px 2px 1px #0d1f28, 2px 2px 1px #0d1f28;
+}
+.modal-content h2 {
+  color: #fe9712;
+  font-size: 3.2rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close-modal:hover, .close-modal:focus {
+  color: #fe9712;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.modal-content form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: "Jumble", sans-serif;
+}
+.modal-content form button {
+  background-color: #fe9712;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  cursor: pointer;
+  font-family: "Jumble", sans-serif;
+  font-size: 3.5vw;
+  text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400, -2px 2px 1px #e05400, 2px 2px 1px #e05400;
+}
+.modal-content form button:hover {
+  filter: brightness(1.2);
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 245.76px;
+  }
+  .novo-servidor {
+    margin-top: 100px;
+  }
+  .novo-servidor img {
+    width: 368.64px;
+  }
+  .informativo p {
+    font-size: 20px;
+  }
+  .informativo h2 {
+    font-size: 32px;
+  }
+  .informativo h3 {
+    font-size: 14px;
+  }
+  .informativo img {
+    top: 20px;
+    right: 220px;
+    width: 38.4px;
+  }
+  .pre-registro-btn {
+    margin-top: -60px;
+  }
+  .pre-registro-btn img {
+    width: 614.4px;
+  }
+  .pre-registro-btn span {
+    top: 105px;
+    left: 180px;
+    font-size: 32px;
+  }
+  .concorra {
+    width: 580px;
+    height: 98px;
+  }
+  .concorra h2 {
+    padding-top: 18px;
+    padding-left: 50px;
+    font-size: 24px;
+  }
+  .concorra h3 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .cronometro {
+    margin-top: 10px;
+  }
+  .cronometro .icone-calendario img {
+    width: 80px;
+    height: 80px;
+  }
+  .cronometro .contador {
+    margin-left: 10px;
+  }
+  .cronometro .contador h3 {
+    font-size: 24px;
+  }
+  .cronometro .contador h2 {
+    font-size: 40px;
+  }
+  .cronometro .contador .legenda {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .cronometro .contador .legenda span + span {
+    margin-left: 5px;
+  }
+  .items {
+    margin-top: 25px;
+  }
+  .items .item {
+    padding: 15px;
+    margin: 15px;
+    width: 110px;
+    height: 110px;
+  }
+  .items .item img {
+    width: 80px;
+    height: 80px;
+  }
+  .items .item span {
+    bottom: 21px;
+    right: 26px;
+    font-size: 16px;
+  }
+  .items .item.top img {
+    top: -15px;
+    left: -15px;
+    width: 140px;
+    height: 140px;
+  }
+  .items .item.top span {
+    bottom: 20px;
+    right: 20px;
+  }
+  .visualizar-premios {
+    width: 300px;
+    height: 52px;
+  }
+  .visualizar-premios h2 {
+    font-size: 16px;
+    padding-top: 12px;
+  }
+  .explore h2 {
+    margin-top: 16px;
+    font-size: 28px;
+  }
+  .modal-content h2 {
+    font-size: 32px;
+  }
+  .modal-content form button {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=style.css.map */

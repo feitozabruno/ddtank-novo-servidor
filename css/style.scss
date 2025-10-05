@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "Jumble";
+  src: url("../font/PoetsenOne-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+body,
+button,
+input,
+textarea {
+  font-size: 1.6rem;
+  font-family: "Jumble", sans-serif;
+  font-weight: normal;
+  --webkit-font-smoothing: antialiased;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+body {
+  background-color: #000;
+  background-image: url(../img/mobile/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -12px;
+  overflow: hidden;
+
+  background-image: url("../img/mobile/cenario1.png");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 100%;
+  padding-top: 3vw; // 24px;
+
+  img {
+    width: 32vw;
+    height: auto;
+  }
+}
+
+.novo-servidor {
+  margin-top: 13vw; // 100px;
+
+  img {
+    width: 48vw;
+    height: auto;
+  }
+}
+
+.data-lancamento {
+  background-image: url(../img/mobile/data-base.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.destaque {
+  color: #fe9712;
+}
+
+.informativo {
+  position: relative;
+  color: #fff;
+  margin-top: 0.5rem;
+  text-shadow: -2px -2px 2px #0d1f28, 2px -2px 1px #0d1f28, -2px 2px 1px #0d1f28,
+    2px 2px 1px #0d1f28;
+
+  p {
+    font-size: 2.6vw; // 20px;
+  }
+
+  h2 {
+    font-size: 4.16vw; // 32px;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 1.822vw; // 14px;
+  }
+
+  img {
+    position: absolute;
+    top: 2.6vw; // 20px;
+    right: 28.64vw; // 220px;
+
+    width: 5vw;
+    height: auto;
+  }
+}
+
+.pre-registro-btn {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: -7.81vw;
+
+  img {
+    width: 80vw;
+    height: auto;
+  }
+  span {
+    position: absolute;
+    top: 13.67vw; // 105px;
+    left: 23.43vw; // 180px;
+    color: #fff;
+    font-size: 4.16vw; // 32px;
+    line-height: 1;
+    text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400,
+      -2px 2px 1px #e05400, 2px 2px 1px #e05400;
+  }
+
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+}
+
+.concorra {
+  background-image: url(../img/mobile/concorra-base.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  width: 75.52vw; // 580px;
+  height: 12.76vw; // 98px;
+
+  margin: 0 auto;
+
+  h2 {
+    padding-top: 2.34vw; // 18px;
+    padding-left: 6.51vw; // 50px;
+    font-weight: normal;
+    font-size: 3.125vw; // 24px;
+  }
+
+  h3 {
+    margin-top: 1.3vw; // 10px;
+    font-weight: normal;
+    font-size: 2.6vw; // 20px;
+  }
+}
+
+.cronometro {
+  text-align: center;
+  margin-top: 1.3vw; // 10px;
+
+  .icone-calendario,
+  .contador {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .icone-calendario {
+    img {
+      width: 10.41vw; // 80px;
+      height: 10.41vw; // 80px;
+    }
+  }
+
+  .contador {
+    margin-left: 1.3vw; // 10px;
+    text-align: left;
+    color: #fff;
+    line-height: 1;
+
+    h3 {
+      font-size: 3.125vw; // 24px;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-size: 5.2vw; // 40px;
+    }
+
+    .legenda {
+      margin-top: 0.65vw; // 5px;
+      font-size: 1.822vw; // 14px;
+      span + span {
+        margin-left: 0.65vw; // 5px;
+      }
+    }
+  }
+}
+
+.box {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  background-image: url("../img/mobile/cenario2.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.items {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 3.25vw;
+
+  .item {
+    background-image: url("../img/mobile/itens/base-itens.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 1.95vw; // 15px;
+    position: relative;
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.95vw;
+
+    width: 14.32vw;
+    height: 14.32vw;
+
+    img {
+      width: 10.41vw;
+      height: 10.41vw;
+    }
+
+    span {
+      position: absolute;
+      bottom: 2.73vw;
+      right: 3.38vw;
+      color: #fff;
+      font-size: 2vw; // 16px;
+    }
+
+    &.top {
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -1.95vw;
+        left: -1.95vw;
+        width: 18.22vw;
+        height: 18.22vw;
+      }
+
+      span {
+        bottom: 2.6vw;
+        right: 2.6vw;
+      }
+    }
+  }
+}
+
+.visualizar-premios {
+  background-image: url("../img/mobile/botao-itens-base.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin: 0 auto;
+  width: 39vw; // 300px
+  height: 6.77vw; // 52px;
+  cursor: pointer;
+
+  h2 {
+    font-size: 2vw; // 16px;
+    padding-top: 1.5625vw; // 12px;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: -3px -3px 3px #e05400, 3px -3px 2px #e05400,
+      -3px 3px 2px #e05400, 3px 3px 2px #e05400;
+  }
+}
+
+.explore {
+  h2 {
+    margin-top: 2vw; // 16px;
+    font-size: 3.64vw; // 28px;
+    color: #ffcc12;
+    text-shadow: 0px 3px 1px #822200;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  background-image: url(../img/mobile/bg.png);
+  background-size: cover;
+  color: #fff;
+  text-shadow: -2px -2px 2px #0d1f28, 2px -2px 1px #0d1f28, -2px 2px 1px #0d1f28,
+    2px 2px 1px #0d1f28;
+
+  h2 {
+    color: #fe9712;
+    font-size: 3.2rem;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #fe9712;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: "Jumble", sans-serif;
+  }
+
+  button {
+    background-color: #fe9712;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    font-family: "Jumble", sans-serif;
+    font-size: 3.5vw;
+    text-shadow: -2px -2px 2px #e05400, 2px -2px 1px #e05400,
+      -2px 2px 1px #e05400, 2px 2px 1px #e05400;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 245.76px; // 32vw at 768px
+  }
+
+  .novo-servidor {
+    margin-top: 100px; // 13vw at 768px
+    img {
+      width: 368.64px; // 48vw at 768px
+    }
+  }
+
+  .informativo {
+    p {
+      font-size: 20px; // 2.6vw at 768px
+    }
+    h2 {
+      font-size: 32px; // 4.16vw at 768px
+    }
+    h3 {
+      font-size: 14px; // 1.822vw at 768px
+    }
+    img {
+      top: 20px; // 2.6vw at 768px
+      right: 220px; // 28.64vw at 768px
+      width: 38.4px; // 5vw at 768px
+    }
+  }
+
+  .pre-registro-btn {
+    margin-top: -60px; // -7.81vw at 768px
+    img {
+      width: 614.4px; // 80vw at 768px
+    }
+    span {
+      top: 105px; // 13.67vw at 768px
+      left: 180px; // 23.43vw at 768px
+      font-size: 32px; // 4.16vw at 768px
+    }
+  }
+
+  .concorra {
+    width: 580px; // 75.52vw at 768px
+    height: 98px; // 12.76vw at 768px
+    h2 {
+      padding-top: 18px; // 2.34vw at 768px
+      padding-left: 50px; // 6.51vw at 768px
+      font-size: 24px; // 3.125vw at 768px
+    }
+    h3 {
+      margin-top: 10px; // 1.3vw at 768px
+      font-size: 20px; // 2.6vw at 768px
+    }
+  }
+
+  .cronometro {
+    margin-top: 10px; // 1.3vw at 768px
+    .icone-calendario img {
+      width: 80px; // 10.41vw at 768px
+      height: 80px; // 10.41vw at 768px
+    }
+    .contador {
+      margin-left: 10px; // 1.3vw at 768px
+      h3 {
+        font-size: 24px; // 3.125vw at 768px
+      }
+      h2 {
+        font-size: 40px; // 5.2vw at 768px
+      }
+      .legenda {
+        margin-top: 5px; // 0.65vw at 768px
+        font-size: 14px; // 1.822vw at 768px
+        span + span {
+          margin-left: 5px; // 0.65vw at 768px
+        }
+      }
+    }
+  }
+
+  .items {
+    margin-top: 25px; // 3.25vw at 768px
+    .item {
+      padding: 15px; // 1.95vw at 768px
+      margin: 15px;
+      width: 110px; // 14.32vw at 768px
+      height: 110px; // 14.32vw at 768px
+      img {
+        width: 80px; // 10.41vw at 768px
+        height: 80px; // 10.41vw at 768px
+      }
+      span {
+        bottom: 21px; // 2.73vw at 768px
+        right: 26px; // 3.38vw at 768px
+        font-size: 16px; // 2vw at 768px
+      }
+      &.top {
+        img {
+          top: -15px; // -1.95vw at 768px
+          left: -15px; // -1.95vw at 768px
+          width: 140px; // 18.22vw at 768px
+          height: 140px; // 18.22vw at 768px
+        }
+        span {
+          bottom: 20px; // 2.6vw at 768px
+          right: 20px; // 2.6vw at 768px
+        }
+      }
+    }
+  }
+
+  .visualizar-premios {
+    width: 300px; // 39vw at 768px
+    height: 52px; // 6.77vw at 768px
+    h2 {
+      font-size: 16px; // 2vw at 768px
+      padding-top: 12px; // 1.5625vw at 768px
+    }
+  }
+
+  .explore h2 {
+    margin-top: 16px; // 2vw at 768px
+    font-size: 28px; // 3.64vw at 768px
+  }
+
+  .modal-content {
+    h2 {
+      font-size: 32px;
+    }
+    form button {
+      font-size: 24px;
+    }
+  }
+}
